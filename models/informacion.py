@@ -11,10 +11,10 @@ class informacion(models.Model):
     descripcion = fields.Text(string="Descripción", required=True)
     alto_cm = fields.Integer(string="Alto en centímetros")
     largo_cm = fields.Integer(string="Largo en centímetros")
-    volumen = fields.Integer(string="Volumen")
-    peso = fields.Integer(string="Peso en Kg.s")
-    densidad = fields.Integer(string="Densidad")
-    autorizado = fields.Boolean(string="¿Autorizado?", default=True)
+    ancho_cm = fields.Integer(string="Ancho en centímetros")
+    peso = fields.Float(string="Peso en Kg.s", digits=(6,2), default=2.7)
+    autorizado = fields.Boolean(string="¿Autorizado?", default=False)
+    sexo = fields.Selection([ ('male', 'Hombre'), ('female', 'Mujer'), ('other', 'Otro')], string="Sexo")
 
 
 #     @api.depends('value')
