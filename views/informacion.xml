@@ -18,10 +18,10 @@
                     <field name="descripcion"/>
                     <field name="alto_cm"/>
                     <field name="largo_cm"/>
-                    <field name="volumen"/>
+                    <field name="ancho_cm"/>
                     <field name="peso"/>
-                    <field name="densidad"/>
                     <field name="autorizado"/>
+                    <field name="sexo"/>
                 </list>
             </field>
         </record>
@@ -34,14 +34,27 @@
                     <sheet>
                         <group>
                             <field name="titulo"/>
-                            <field name="descripcion"/>
-                            <field name="alto_cm"/>
-                            <field name="largo_cm"/>
-                            <field name="volumen"/>
-                            <field name="peso"/>
-                            <field name="densidad"/>
-                            <field name="autorizado"/>
                         </group>
+
+                        <notebook>
+                            <page string="Datos de Texto">
+                                <group>
+                                    <field name="descripcion"/>
+                                    <field name="autorizado"/>
+                                    <field name="sexo"/>
+                                </group>
+
+                            </page>
+
+                            <page string="Datos Numéricos">
+                                <group>
+                                    <field name="alto_cm"/>
+                                    <field name="largo_cm"/>
+                                    <field name="ancho_cm"/>
+                                    <field name="peso"/>
+                                </group>
+                            </page>
+                        </notebook>
                     </sheet>
                 </form>
             </field>
