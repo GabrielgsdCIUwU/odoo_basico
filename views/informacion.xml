@@ -19,7 +19,9 @@
                     <field name="alto_cm"/>
                     <field name="largo_cm"/>
                     <field name="ancho_cm"/>
+                    <field name="volumen"/>
                     <field name="peso"/>
+                    <field name="densidad"/>
                     <field name="autorizado"/>
                     <field name="sexo"/>
                 </list>
@@ -56,6 +58,7 @@
                                     <group>
                                         <field name="peso"/>
                                         <field name="volumen"/>
+                                        <field name="densidad"/>
                                     </group>
                                 </group>
                             </page>
