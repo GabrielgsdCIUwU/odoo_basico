@@ -48,10 +48,15 @@
 
                             <page string="Datos Numéricos">
                                 <group>
-                                    <field name="alto_cm"/>
-                                    <field name="largo_cm"/>
-                                    <field name="ancho_cm"/>
-                                    <field name="peso"/>
+                                    <group>
+                                        <field name="alto_cm"/>
+                                        <field name="largo_cm"/>
+                                        <field name="ancho_cm"/>
+                                    </group>
+                                    <group>
+                                        <field name="peso"/>
+                                        <field name="volumen"/>
+                                    </group>
                                 </group>
                             </page>
                         </notebook>
