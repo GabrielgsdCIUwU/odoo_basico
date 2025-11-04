@@ -1,24 +1,65 @@
 <odoo>
     <data>
-<!--
-        <template id="listing">
-          <ul>
-            <li t-foreach="objects" t-as="object">
-              <a t-attf-href="#{ root }/objects/#{ object.id }">
-                <t t-esc="object.display_name"/>
-              </a>
-            </li>
-          </ul>
-        </template>
-        <template id="object">
-          <h1><t t-esc="object.display_name"/></h1>
-          <dl>
-            <t t-foreach="object._fields" t-as="field">
-              <dt><t t-esc="field"/></dt>
-              <dd><t t-esc="object[field]"/></dd>
-            </t>
-          </dl>
-        </template>
--->
+        <record model="odoo_basico.informacion" id="odoo_basico_informacion_1">
+            <field name="titulo">Rexistro 1</field>
+            <field name="descripcion">Descripción Rexistro 1</field>
+            <field name="autorizado">True</field>
+            <field name="sexo">male</field>
+            <field name="alto_cm">100</field>
+            <field name="largo_cm">100</field>
+            <field name="ancho_cm">100</field>
+            <field name="peso">100</field>
+        </record>
+        <record model="odoo_basico.informacion" id="odoo_basico_informacion_2">
+            <field name="titulo">Rexistro 2</field>
+            <field name="descripcion">Descripción Rexistro 2</field>
+            <field name="autorizado">True</field>
+            <field name="sexo">male</field>
+            <field name="alto_cm">200</field>
+            <field name="largo_cm">200</field>
+            <field name="ancho_cm">200</field>
+            <field name="peso">200</field>
+        </record>
+        <record model="odoo_basico.informacion" id="odoo_basico_informacion_3">
+            <field name="titulo">Rexistro 3</field>
+            <field name="descripcion">Descripción Rexistro 3</field>
+            <field name="autorizado">True</field>
+            <field name="sexo">male</field>
+            <field name="alto_cm">300</field>
+            <field name="largo_cm">300</field>
+            <field name="ancho_cm">300</field>
+            <field name="peso">300</field>
+        </record>
+        <record model="odoo_basico.informacion" id="odoo_basico_informacion_4">
+            <field name="titulo">Rexistro 4</field>
+            <field name="descripcion">Descripción Rexistro 4</field>
+            <field name="autorizado">False</field>
+            <field name="sexo">female</field>
+            <field name="alto_cm">400</field>
+            <field name="largo_cm">400</field>
+            <field name="ancho_cm">400</field>
+            <field name="peso">400</field>
+        </record>
+        <record model="odoo_basico.informacion" id="odoo_basico_informacion_5">
+            <field name="titulo">Rexistro 5</field>
+            <field name="descripcion">Descripción Rexistro 5</field>
+            <field name="autorizado">False</field>
+            <field name="sexo">female</field>
+            <field name="alto_cm">500</field>
+            <field name="largo_cm">500</field>
+            <field name="ancho_cm">500</field>
+            <field name="peso">500</field>
+        </record>
+        <record model="odoo_basico.informacion" id="odoo_basico_informacion_6">
+            <field name="titulo">Rexistro 6</field>
+            <field name="descripcion">Descripción Rexistro 6</field>
+            <field name="autorizado">False</field>
+            <field name="sexo">female</field>
+            <field name="alto_cm">600</field>
+            <field name="largo_cm">600</field>
+            <field name="ancho_cm">600</field>
+            <field name="peso">600</field>
+        </record>
+
     </data>
 </odoo>
