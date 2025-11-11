@@ -3,7 +3,7 @@
         <record model="ir.actions.act_window" id="informacion_list_action">
             <field name="name">modulo odoo_basico, modelo información</field>
             <field name="res_model">odoo_basico.informacion</field>
-            <field name="view_mode">list,form,graph</field>
+            <field name="view_mode">list,form,graph,pivot</field>
             <field name="help" type="html">
                 <p class="o_view_nocontent_smiling_face">Tienes que crear el primer registro</p>
             </field>
@@ -86,6 +86,20 @@
                 <graph string="densidades" type="bar">
                     <field name="alto_cm" type="row"/>
                 </graph>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="informacion_pivot_view">
+            <field name="name">informacion.pivot</field>
+            <field name="model">odoo_basico.informacion</field>
+            <field name="arch" type="xml">
+                <pivot string="pivotando">
+                    <field name="alto_cm" type="row"/>
+                    <field name="sexo" type="col"/>
+                    <field name="densidad" type="measure"/>
+                    <field name="peso" type="measure"/>
+                    <field name="volumen" type="measure"/>
+                </pivot>
             </field>
         </record>
 
