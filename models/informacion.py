@@ -17,6 +17,9 @@ class informacion(models.Model):
     autorizado = fields.Boolean(string="¿Autorizado?", default=False)
     sexo = fields.Selection([ ('male', 'Hombre'), ('female', 'Mujer'), ('other', 'Otro')], string="Sexo")
     densidad = fields.Float(string="Densidad Kg/m3:", digits=(6,2), store=True, compute="_densidad")
+    foto = fields.Binary(string="Foto")
+    adjunto_nombre = fields.Char(string="Nombre Adjunto")
+    adjunto = fields.Binary(string="Archivo adjunto")
 
     @api.depends('alto_cm', 'ancho_cm', 'largo_cm')
     def _volumen(self):

@@ -62,6 +62,16 @@
                                     </group>
                                 </group>
                             </page>
+                            <page string="Datos Binary">
+                                <group>
+                                    <field name="foto" widget="image" class="oe_avatar"/>
+                                    <field name="foto" widget="image"/>
+                                </group>
+                                <group>
+                                    <field name="adjunto_nombre" invisible="1"/>
+                                    <field name="adjunto" filename="adjunto_nombre"/>
+                                </group>
+                            </page>
                         </notebook>
                     </sheet>
                 </form>
