@@ -20,6 +20,7 @@ class informacion(models.Model):
     foto = fields.Binary(string="Foto")
     adjunto_nombre = fields.Char(string="Nombre Adjunto")
     adjunto = fields.Binary(string="Archivo adjunto")
+    literal = fields.Char(store=False)
 
     @api.depends('alto_cm', 'ancho_cm', 'largo_cm')
     def _volumen(self):
@@ -33,3 +34,12 @@ class informacion(models.Model):
                 register.densidad = 0
                 return
             register.densidad = float(register.peso) / float(register.volumen)
+
+    @api.onchange('alto_cm')
+    def _avisoAlto(self):
+        for registro in self:
+            if registro.alto_cm > 7:
+                registro.literal = f"La altura tiene un valor posiblemente excesivo a 7, has puesto: {registro.alto_cm}"
+                return
+
+            registro.literal = ""
