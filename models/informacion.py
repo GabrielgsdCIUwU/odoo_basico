@@ -7,6 +7,7 @@ from odoo.exceptions import ValidationError
 class informacion(models.Model):
     _name = 'odoo_basico.informacion'
     _description = 'Modelo con distintos tipos de datos'
+    _sql_constraints = [('tituloUnico', 'unique(titulo)', "No se puede repetir el titulo")]
 
     titulo = fields.Char(string="Titulo", size=28, required=True)
     descripcion = fields.Text(string="Descripción", required=True)
