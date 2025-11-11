@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from odoo import models, fields, api
+from odoo.exceptions import ValidationError
 
 
 class informacion(models.Model):
@@ -43,3 +44,9 @@ class informacion(models.Model):
                 return
 
             registro.literal = ""
+
+    @api.constrains('peso')
+    def _constrain_peso(self):
+        for registro in self:
+            if registro.peso < 1 or registro.peso > 4:
+                raise ValidationError(f"El peso tiene que ser entre 1 y 4, actualmente: {registro.peso}")
